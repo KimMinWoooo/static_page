@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민우 - Study Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>김민우의 HTML5/CSS3 학습</h1>
+        <section class="study-section">
+            <h2>HTML5</h2>
+            <p>HTML5는 웹 페이지를 만들기 위한 최신 HTML 표준으로, 구조적이고 의미론적인 태그를 제공하여 웹 접근성을 향상시키고, 멀티미디어 기능을 강화한 버전입니다.</p>
+            <h3>1. 기존 HTML vs HTML5</h3>
+            <p>HTML4와 HTML5의 차이를 예제로 확인해 보겠습니다.</p>
+            
+            <h4>✅ 기존 HTML (HTML4)</h4>
+            <pre><code>
+&lt;div id="header"&gt;헤더 영역&lt;/div&gt;
+&lt;div id="nav"&gt;메뉴 영역&lt;/div&gt;
+&lt;div id="content"&gt;본문 영역&lt;/div&gt;
+&lt;div id="footer"&gt;푸터 영역&lt;/div&gt;
+            </code></pre>
+            
+            <h4>✅ HTML5 버전</h4>
+            <pre><code>
+&lt;header&gt;헤더 영역&lt;/header&gt;
+&lt;nav&gt;메뉴 영역&lt;/nav&gt;
+&lt;section&gt;본문 영역&lt;/section&gt;
+&lt;footer&gt;푸터 영역&lt;/footer&gt;
+            </code></pre>
+            <p>👉 HTML5에서는 의미를 가진 태그를 사용하여 코드의 가독성과 접근성을 높였습니다.</p>
+            <h3>2. 멀티미디어 태그</h3>
+            <p>이전 HTML에서는 플러그인을 사용해야 했던 멀티미디어 요소를 HTML5에서는 기본 태그로 지원합니다.</p>
+            
+            <h4>✅ 기존 HTML (HTML4)</h4>
+            <pre><code>
+&lt;object data="video.mp4" type="video/mp4"&gt;&lt;/object&gt;
+            </code></pre>
+            
+            <h4>✅ HTML5 버전</h4>
+            <pre><code>
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+            </code></pre>
+            <p>👉 이제 video 태그를 사용하면 간단하게 동영상을 삽입할 수 있습니다.</p>
+            <h3>캔버스와 SVG</h3>
+            <p>HTML5에서는 그래픽을 직접 그릴 수 있는 canvas와 벡터 그래픽을 지원하는 svg 태그를 제공</p>
+            <pre><code>
+                &lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+                &lt;script&gt;
+                    var canvas = document.getElementById("myCanvas");
+                    var ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "blue";
+                    ctx.fillRect(20, 20, 150, 75);
+                    &lt;/script&gt;
+            </code></pre>
+        </section>
+        <section class="study-section">
+            <h2>CSS3</h2>
+            <p>CSS3는 기존 CSS에서 향상된 기능을 제공하며, 주요 특징은 다음과 같습니다.</p>
+            
+            <h3>1. CSS3 선택자</h3>
+            <p>CSS3에서는 보다 정교한 선택자를 사용할 수 있습니다.</p>
+            <pre><code>
+/* 기존 CSS (CSS2) */
+div p { color: blue; }
+
+/* CSS3에서의 개선 */
+div > p { color: blue; } /* 직계 자식만 선택 */
+input:focus { border: 2px solid red; } /* 포커스 시 스타일 적용 */
+            </code></pre>
+            
+            <h3>2. 미디어 쿼리</h3>
+            <p>미디어 쿼리를 사용하면 반응형 웹 디자인을 구현할 수 있습니다.</p>
+            <pre><code>
+@media (max-width: 600px) {
+    body { background-color: lightgray; }
+}
+            </code></pre>
+            <p>👉 화면 크기에 따라 스타일을 동적으로 변경할 수 있습니다.</p>
+            
+            <h3>3. 애니메이션과 전환 효과</h3>
+            <p>CSS3에서는 애니메이션과 전환 효과를 지원하여 더욱 부드러운 UI를 만들 수 있습니다.</p>
+            <pre><code>
+/* 전환 효과 */
+button {
+    transition: background-color 0.5s ease-in-out;
+}
+button:hover {
+    background-color: blue;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.element {
+    animation: fadeIn 2s ease-in;
+}
+            </code></pre>
+            <p>👉 기존 JavaScript 없이도 애니메이션을 쉽게 적용할 수 있습니다.</p>
+        </section>
+        <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
+    </div>
+</body>
+</html>

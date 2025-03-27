@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang ="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>정예진 - Study Page</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            .FrameOuter {
+                padding: 5px;
+            }
+
+            .FrameInner {
+                display: inline-block;
+                width: 30%;
+                padding:20px;
+                height: 200px;
+                background-color: white;;
+                border-radius: 30px;
+            }
+
+            .FrameBasic {
+                background-color: white; 
+                width: 70%;
+                margin: 10px; 
+                padding: 30px; 
+                border-radius: 30px;
+            }
+
+            .FrameCode {
+                background-color: whitesmoke;
+                width: 50%;
+                display: left;
+            }
+        </style>
+
+    </head>
+
+    <body>
+       <div class - "container">
+            <h1> 정예진의 HTMl/CSS3 학습 </h1>
+            <section class = "study-section">
+
+                <h2> HTML5 </h2>
+                <h3>정의</h3>
+                <p>Hyper Text Markup Language 약어로 하이퍼 텍스트 기능을 가진문서를 만드는 마크업 언어로, .htm / .html 확장자 포맷을 가지고 있다. 웹 브라우저를 통해 화면에 렌더링된다.</p>
+                <details>
+                    <summary>특징</summary>
+                    
+	                <div class = 'FrameOuter'>
+                        <h3>Html5의 주 안점 - 플러그인 없이도 여러 디자인을 구현할 수 있게 한다</h3>
+
+                        <div class = 'FrameInner'>
+                            <h3>웹 애플리케이션 개발 가능</h3>
+                            <p>- canvas 등의 태그를 이용함으로써 웹 문서보다 동적인 웹 어플리케이션을 개발 할 수 있다. </p>
+                            <br>
+                        </div>
+
+                        <div class = 'FrameInner'>
+                            <h3>시맨틱 웹</h3>
+                            <p>- 불필요한 정보의 범람에 대응한 해결책</p>
+                            <p>- 의미 없이 콘텐츠를 쌓아두는 웹으로부터 탈피해 태그에 어떤 콘텐츠가 들어가는지 명시</p>
+                        </div>
+
+                        <div class = 'FrameInner'>
+                            <h3>호환성 우선, 웹 표준</h3>
+                            <p>- 웹에서 표준적으로 사용되는 기술, 규격 중시</p>
+                            <p>- 다른 브라우저를 사용할때 같은 결과가 표시되도록</p>
+                        </div>
+
+                    </div>
+
+                </details>
+
+                <details>
+                    <summary>구조</summary>                    
+                    
+                    <div class = 'FrameBasic'>
+                        <h2> html </h2>
+                        <p>- 실제 문서의 내용을 표시하는 태그가 바로 html태그</p>
+                        <p>- 실제 문서의 내용들이 포함되는데, 내용으로는 문서가 표시할 콘텐츠 뿐만 아니라 문서에 대한 정보(설정값)도 함께 포함될 수 있다</p>
+                    </div>
+
+                    <div class = 'FrameBasic'>
+                        <h2> head </h2>
+                        <p>- 브라우저에게 문서의 정보를 전달한다</p>
+                        <p>- 태그는 문서의 키워드 또는 설정 등 문서와 관련된 여러가지 항목들을 지정할 때 사용하는 태그인데, 그 중 대표적인 항목이 바로 문서의 인코딩 방식을 설정해주는 문자셋(character set)등 다양한 항목을 지정하는 <i>meta</i>태그</p>
+                        <p>- 탭 메뉴에 표시될 문서 제목을 지정하는 <i>title</i>태그 등이 들어갈 수 있다</p>
+                    </div>
+
+                    <div class = 'FrameBasic'>
+                        <h2> body </h2>
+                        <p>- 문서의 실질적인 내용이 들어가는 부분</p>
+                        <p>- 웹 브라우저 화면에 표시될 콘텐츠를 입력한다</p>
+                    </div>
+                </details>
+
+
+            </section>
+
+            <section class="study-section">
+                <h2>CSS3</h2>
+                <h3>정의</h3>
+                <p>Cascading Style Sheet의 약어로, HTML과 함께 웹을 구성하는 기본 프로그래밍 요소. HTML이 텍스트나 이미지, 표와 같은 구성 요소를 웹 문서에 넣어 뼈대를 만드는 것이라면 CSS는 색상이나 크기, 이미지 크기나 위치, 배치 방법 등 웹 문서의 디자인 요소를 담당한다.</p>
+                <p>CSS 구문은 선택자(selector)와 선언부(declaration)로 구성된다. 선택자는 디자인을 적용하고자 하는 HTML요소, CSS 속성 이름과 값이 포함되는 선언부는 콜론(:)으로 구분 되어진 다수의 항목을 의미한다.</p>
+
+                <details>
+                    <summary>적용방법</summary>
+
+                    <div class = 'FrameBasic'>
+                        <h2> 1) 내부 스타일시트 </h2>
+                        <p>html 파일에 스타일을 기술하는 방법으로 head 태그 사이에 style 태그를 작성</p>
+                    </div>
+
+                    <div class = 'FrameBasic'>
+                        <h2> 2) 외부 스타일시트 </h2>
+                        <p>css 를 작성하는 가장 기본적인 방법. 별도의 파일에 CSS 문서를 작성하고 해당 CSS를 필요로 하는 html 문서에서 불러와 사용하는 형식. 이때 css는 동일한 서버에 있어도 되지만 url을 통해 다른 서버의 css를 불러오는 것도 가능</p>
+                    </div>
+
+                    <div class = 'FrameBasic'>
+                        <h2> 3) 인라인 스타일 </h2>
+                        <p>html 태그에 필요한 디자인 속성을 직접 작성하는 형식. 필요한 디자인을 바로 적용할 수 있다는 편리함이 있지만 일관된 디자인 체계를 유지하는 데에는 방해가 된다</p>
+                    </div>
+
+                </details>
+
+                <details>
+                    <summary>기능 예시</summary>
+
+                    <div class = 'FrameBasic'>
+                        <h2> 1) Media Queries for Responsive Design </h2>
+                        <p>화면 크기나 해상도에 따라 다른 스타일을 적용할 수 있게 하는 기능. 반응형 웹 디자인에 사용된다. 다양한 기기에 맞춰 콘텐츠의 레이아웃을 조정할 수 있기 때문에 각 기기에서 최적화된 화면을 제공할 수 있다.</p>
+                        <div class = 'FrameCode'>
+                            <pre><code >
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                
+                                .header {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    text-align: center;
+                                    padding: 20px;
+                                }
+                                
+                                .container {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+                                
+                                .card {
+                                background-color: #f9f9f9;
+                                margin: 10px;
+                                padding: 20px;
+                                flex: 1 1 100%;
+                                }
+                            </code></pre>
+                        </div>
+
+                    </div>
+
+                    <div class = 'FrameBasic'>
+                        <h2> 2) CSS Scroll Snap </h2>
+                        <p>스크롤 동작을 제어하여 사용자가 특정 요소를 스크롤할 때 부드럽고 일정한 스냅 효과를 제공하는 기능. 이미지 슬라이드나 수평 스크롤에 적용할 수 있다.</p>
+                        <div class = 'FrameCode'>
+                            <pre><code >
+                                .scroll-container {
+                                    scroll-snap-type: x mandatory;
+                                }
+                                .scroll-item {
+                                    scroll-snap-align: start;
+                                }
+                            </code></pre>
+                        </div>
+                    </div>
+
+                    <div class = 'FrameBasic'>
+                        <h2> 3) CSS @layer </h2>
+                        <p>스타일 시트에서 여러 레이어를 정의할 수 있게 해주는 기능. 스타일을 그룹화하여 특정 레이어를 쉽게 수정할 수 있도록 한다.</p>
+                        <div class = 'FrameCode'>
+                            <pre><code >
+                                @layer reset, base, components {
+                                    /* 각 레이어별 스타일 정의 */
+                                }
+                            </code></pre>
+                        </div>
+
+                    </div>
+
+
+                </details>
+
+            </section>
+
+            <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
+
+        </div>
+
+    </body>
+
+</html>
