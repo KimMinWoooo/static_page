@@ -3,103 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML & CSS Quiz</title>
+    <title>Quiz 1 - HTML5 & CSS3</title>
     <link rel="stylesheet" href="Quiz.css">
 </head>
 <body>
     <div class="container">
-        <h1>HTML & CSS Quiz</h1>
+        <h1>Quiz 1 - HTML5 & CSS3</h1>
         <form id="quiz-form">
-            <!-- 기존 퀴즈 -->
             <div class="quiz-question">
-                <h3>1. HTML5에서 웹 페이지의 구조를 나타내는 새로운 태그가 아닌 것은?</h3>
-                <label><input type="radio" name="q1" value="a"> &lt;article&gt;</label><br>
-                <label><input type="radio" name="q1" value="b"> &lt;header&gt;</label><br>
-                <label><input type="radio" name="q1" value="c"> &lt;div&gt;</label><br>
-                <label><input type="radio" name="q1" value="d"> &lt;section&gt;</label>
+                <h3>1. HTML은 하이퍼텍스트 마크업 언어로, 문서를 자체적으로 렌더링하여 화면에 표시할 수 있다.</h3>
+                <label><input type="radio" name="q1" value="a"> O</label><br>
+                <label><input type="radio" name="q1" value="b"> X</label>
             </div>
-
+            
             <div class="quiz-question">
-                <h3>2. CSS3에서 반응형 웹 디자인을 구현할 때 사용하는 기술은?</h3>
-                <label><input type="radio" name="q2" value="a"> @media</label><br>
-                <label><input type="radio" name="q2" value="b"> @keyframes</label><br>
-                <label><input type="radio" name="q2" value="c"> @font-face</label><br>
-                <label><input type="radio" name="q2" value="d"> @transition</label>
+                <h3>2. HTML5의 특징으로 알맞지 않은 것은?</h3>
+                <label><input type="radio" name="q2" value="a"> 시맨틱 웹</label><br>
+                <label><input type="radio" name="q2" value="b"> 플러그인 중시</label><br>
+                <label><input type="radio" name="q2" value="c"> 웹 표준 규격 중시</label><br>
+                <label><input type="radio" name="q2" value="d"> 웹 어플리케이션 작성 가능</label>
             </div>
-
+            
             <div class="quiz-question">
-                <h3>3. 다음 중 CSS3 애니메이션을 정의하는 속성은 무엇인가?</h3>
-                <label><input type="radio" name="q3" value="a"> transition</label><br>
-                <label><input type="radio" name="q3" value="b"> animation</label><br>
-                <label><input type="radio" name="q3" value="c"> transform</label><br>
-                <label><input type="radio" name="q3" value="d"> opacity</label>
+                <h3>3. CSS 구문은 디자인을 적용하고자 하는 HTML 요소를 뜻하는 [ ]와 속성의 이름, 값이 포함되는 [ ]로 구성된다.</h3>
+                <label><input type="radio" name="q3" value="a"> 선택자 - 선택부</label><br>
+                <label><input type="radio" name="q3" value="b"> 선언부 - 선택자</label><br>
+                <label><input type="radio" name="q3" value="c"> 선택자 - 선언부</label><br>
+                <label><input type="radio" name="q3" value="d"> 선언자 - 선언부</label>
             </div>
-
-            <!-- 추가된 퀴즈 -->
+            
             <div class="quiz-question">
-                <h3>4. HTML은 하이퍼텍스트 마크업 언어로, 문서를 자체적으로 렌더링하여 화면에 표시할 수 있다.</h3>
-                <label><input type="radio" name="q4" value="a"> O</label><br>
-                <label><input type="radio" name="q4" value="b"> X</label>
+                <h3>4. CSS를 문서에 적용하는 방법으로 옳은 것을 모두 고르시오.</h3>
+                <label><input type="checkbox" name="q4" value="a"> HTML 파일의 style 태그 사용</label><br>
+                <label><input type="checkbox" name="q4" value="b"> 개별 태그 내에 직접 작성</label><br>
+                <label><input type="checkbox" name="q4" value="c"> 별도의 CSS 파일을 작성하여 링크</label>
             </div>
-
+            
             <div class="quiz-question">
-                <h3>5. 다음 중 HTML5의 특징이 아닌 것은?</h3>
-                <label><input type="radio" name="q5" value="a"> 시맨틱 웹</label><br>
-                <label><input type="radio" name="q5" value="b"> 플러그인 중지</label><br>
-                <label><input type="radio" name="q5" value="c"> 웹 표준 규격 중심</label><br>
-                <label><input type="radio" name="q5" value="d"> 웹 애플리케이션 작성 불가능</label>
+                <h3>5. HTML5에서 웹 페이지의 구조를 나타내는 새로운 태그가 아닌 것은?</h3>
+                <label><input type="radio" name="q5" value="a"> article </label><br>
+                <label><input type="radio" name="q5" value="b"> header </label><br>
+                <label><input type="radio" name="q5" value="c"> div </label><br>
+                <label><input type="radio" name="q5" value="d"> section</label>
             </div>
-
+            
             <div class="quiz-question">
-                <h3>6. CSS 규칙은 스타일을 적용할 HTML 요소를 나타내는 [ ] 와 속성 이름 및 값을 포함하는 [ ] 로 구성된다.</h3>
-                <label><input type="radio" name="q6" value="a"> 선택자 - 선택부</label><br>
-                <label><input type="radio" name="q6" value="b"> 선언 - 선택자</label><br>
-                <label><input type="radio" name="q6" value="c"> 선택자 - 선언</label><br>
-                <label><input type="radio" name="q6" value="d"> 선언 - 선언부</label>
+                <h3>6. CSS3에서 반응형 웹 디자인을 구현할 때 사용하는 기술은?</h3>
+                <label><input type="radio" name="q6" value="a"> @media</label><br>
+                <label><input type="radio" name="q6" value="b"> @keyframes</label><br>
+                <label><input type="radio" name="q6" value="c"> @font-face</label><br>
+                <label><input type="radio" name="q6" value="d"> @transition</label>
             </div>
-
+            
             <div class="quiz-question">
-                <h3>7. CSS를 문서에 적용하는 올바른 방법을 모두 고르시오. (복수 선택 가능)</h3>
-                <label><input type="checkbox" name="q7" value="a"> HTML 파일의 &lt;head&gt; 태그 내에 &lt;style&gt; 태그 작성</label><br>
-                <label><input type="checkbox" name="q7" value="b"> 개별 태그 내에 필요한 디자인 속성을 직접 작성</label><br>
-                <label><input type="checkbox" name="q7" value="c"> 별도의 CSS 파일을 작성한 후 src를 통해 불러오기</label>
+                <h3>7. 다음 중 CSS3 애니메이션을 정의하는 속성은 무엇인가?</h3>
+                <label><input type="radio" name="q7" value="a"> transition</label><br>
+                <label><input type="radio" name="q7" value="b"> animation</label><br>
+                <label><input type="radio" name="q7" value="c"> transform</label><br>
+                <label><input type="radio" name="q7" value="d"> opacity</label>
             </div>
-
+            
+            <div class="quiz-question">
+                <h3>8. CSS3에서 요소의 크기를 유동적으로 조정할 때 사용하는 단위는?</h3>
+                <label><input type="radio" name="q8" value="a"> px</label><br>
+                <label><input type="radio" name="q8" value="b"> em</label><br>
+                <label><input type="radio" name="q8" value="c"> rem</label><br>
+                <label><input type="radio" name="q8" value="d"> %</label>
+            </div>
+            
+            <div class="quiz-question">
+                <h3>9. HTML5에서 텍스트 단락을 만드는 태그는?</h3>
+                <label><input type="radio" name="q9" value="a"> p </label><br>
+                <label><input type="radio" name="q9" value="b"> div </label><br>
+                <label><input type="radio" name="q9" value="c"> a </label><br>
+                <label><input type="radio" name="q9" value="d"> h1 </label>
+            </div>
+            
+            <div class="quiz-question">
+                <h3>10. CSS3에서 id 선택자를 사용할 때 접두사는 무엇인가?</h3>
+                <label><input type="radio" name="q10" value="a"> %</label><br>
+                <label><input type="radio" name="q10" value="b"> @</label><br>
+                <label><input type="radio" name="q10" value="c"> #</label><br>
+                <label><input type="radio" name="q10" value="d"> !</label>
+            </div>
+            
+            <div class="quiz-question">
+                <h3>11. HTML5에서 링크 주소를 추가하는 방법은?</h3>
+                <label><input type="radio" name="q11" value="a"> a type= </label><br>
+                <label><input type="radio" name="q11" value="b"> a class= </label><br>
+                <label><input type="radio" name="q11" value="c"> a href= </label><br>
+                <label><input type="radio" name="q11" value="d"> a hidden= </label>
+            </div>
+            
             <button type="submit">제출하기</button>
         </form>
         <p id="result"></p>
         <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
     </div>
-
     <script>
         document.getElementById("quiz-form").addEventListener("submit", function(event) {
             event.preventDefault();
             let score = 0;
-
-            // 정답 체크
-            const answers = {
+            let answers = {
                 q1: "c",
                 q2: "a",
                 q3: "b",
-                q4: "a",
-                q5: "d",
-                q6: "c"
+                q4: "d",
+                q5: "a",
+                q6: "c",
+                q7: "d",
+                q8: "a",
+                q9: "c",
+                q10: "c",
+                q11: "a"
             };
-
-            for (let key in answers) {
-                if (document.querySelector(`input[name="${key}"]:checked`)?.value === answers[key]) {
+            
+            Object.keys(answers).forEach((question) => {
+                if (document.querySelector(`input[name="${question}"]:checked`)?.value === answers[question]) {
                     score++;
                 }
-            }
-
-            // 체크박스 정답 확인
-            let correctCheckboxAnswers = ["a", "c"];
-            let checkedValues = Array.from(document.querySelectorAll('input[name="q7"]:checked')).map(input => input.value);
-            if (checkedValues.length === correctCheckboxAnswers.length && checkedValues.every(val => correctCheckboxAnswers.includes(val))) {
-                score++;
-            }
-
-            document.getElementById("result").innerText = `당신의 점수: ${score} / 7`;
+            });
+            
+            document.getElementById("result").innerText = `당신의 점수: ${score} / 11`;
         });
     </script>
 </body>
