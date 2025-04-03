@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz 1 - HTML5 & CSS3</title>
+    <title>HTML & CSS Quiz</title>
     <link rel="stylesheet" href="Quiz.css">
 </head>
 <body>
     <div class="container">
-        <h1>Quiz 1 - HTML5 & CSS3</h1>
+        <h1>HTML & CSS Quiz</h1>
         <form id="quiz-form">
+            <!-- 기존 퀴즈 -->
             <div class="quiz-question">
                 <h3>1. HTML5에서 웹 페이지의 구조를 나타내는 새로운 태그가 아닌 것은?</h3>
                 <label><input type="radio" name="q1" value="a"> &lt;article&gt;</label><br>
@@ -17,7 +18,7 @@
                 <label><input type="radio" name="q1" value="c"> &lt;div&gt;</label><br>
                 <label><input type="radio" name="q1" value="d"> &lt;section&gt;</label>
             </div>
-            
+
             <div class="quiz-question">
                 <h3>2. CSS3에서 반응형 웹 디자인을 구현할 때 사용하는 기술은?</h3>
                 <label><input type="radio" name="q2" value="a"> @media</label><br>
@@ -33,27 +34,72 @@
                 <label><input type="radio" name="q3" value="c"> transform</label><br>
                 <label><input type="radio" name="q3" value="d"> opacity</label>
             </div>
-            
+
+            <!-- 추가된 퀴즈 -->
+            <div class="quiz-question">
+                <h3>4. HTML은 하이퍼텍스트 마크업 언어로, 문서를 자체적으로 렌더링하여 화면에 표시할 수 있다.</h3>
+                <label><input type="radio" name="q4" value="a"> O</label><br>
+                <label><input type="radio" name="q4" value="b"> X</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>5. 다음 중 HTML5의 특징이 아닌 것은?</h3>
+                <label><input type="radio" name="q5" value="a"> 시맨틱 웹</label><br>
+                <label><input type="radio" name="q5" value="b"> 플러그인 중지</label><br>
+                <label><input type="radio" name="q5" value="c"> 웹 표준 규격 중심</label><br>
+                <label><input type="radio" name="q5" value="d"> 웹 애플리케이션 작성 불가능</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>6. CSS 규칙은 스타일을 적용할 HTML 요소를 나타내는 [ ] 와 속성 이름 및 값을 포함하는 [ ] 로 구성된다.</h3>
+                <label><input type="radio" name="q6" value="a"> 선택자 - 선택부</label><br>
+                <label><input type="radio" name="q6" value="b"> 선언 - 선택자</label><br>
+                <label><input type="radio" name="q6" value="c"> 선택자 - 선언</label><br>
+                <label><input type="radio" name="q6" value="d"> 선언 - 선언부</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>7. CSS를 문서에 적용하는 올바른 방법을 모두 고르시오. (복수 선택 가능)</h3>
+                <label><input type="checkbox" name="q7" value="a"> HTML 파일의 &lt;head&gt; 태그 내에 &lt;style&gt; 태그 작성</label><br>
+                <label><input type="checkbox" name="q7" value="b"> 개별 태그 내에 필요한 디자인 속성을 직접 작성</label><br>
+                <label><input type="checkbox" name="q7" value="c"> 별도의 CSS 파일을 작성한 후 src를 통해 불러오기</label>
+            </div>
+
             <button type="submit">제출하기</button>
         </form>
         <p id="result"></p>
         <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
     </div>
-    
+
     <script>
         document.getElementById("quiz-form").addEventListener("submit", function(event) {
             event.preventDefault();
             let score = 0;
-            if (document.querySelector('input[name="q1"]:checked')?.value === "c") {
+
+            // 정답 체크
+            const answers = {
+                q1: "c",
+                q2: "a",
+                q3: "b",
+                q4: "a",
+                q5: "d",
+                q6: "c"
+            };
+
+            for (let key in answers) {
+                if (document.querySelector(`input[name="${key}"]:checked`)?.value === answers[key]) {
+                    score++;
+                }
+            }
+
+            // 체크박스 정답 확인
+            let correctCheckboxAnswers = ["a", "c"];
+            let checkedValues = Array.from(document.querySelectorAll('input[name="q7"]:checked')).map(input => input.value);
+            if (checkedValues.length === correctCheckboxAnswers.length && checkedValues.every(val => correctCheckboxAnswers.includes(val))) {
                 score++;
             }
-            if (document.querySelector('input[name="q2"]:checked')?.value === "a") {
-                score++;
-            }
-            if (document.querySelector('input[name="q3"]:checked')?.value === "b") {
-                score++;
-            }
-            document.getElementById("result").innerText = `당신의 점수: ${score} / 3`;
+
+            document.getElementById("result").innerText = `당신의 점수: ${score} / 7`;
         });
     </script>
 </body>

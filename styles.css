@@ -87,3 +87,36 @@ h1 {
 .preview-box:hover {
     background: #bbdefb;
 }
+
+.study-links {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.study-links h2 {
+    color: #007bff;
+    font-size: 22px;
+}
+
+.study-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.study-links li {
+    margin: 10px 0;
+}
+
+.study-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.study-links a:hover {
+    text-decoration: underline;
+}
