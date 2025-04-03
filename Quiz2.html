@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2 - HTML5 & CSS3</title>
+    <link rel="stylesheet" href="Quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz 2 - HTML5 & CSS3</h1>
+        <form id="quiz-form">
+            <div class="quiz-question">
+                <h3>1. Hyper Text Markup Language의 약어인 HTML은 하이퍼 텍스트 문서를 만드는 언어로, 자체적으로 문서의 내용을 렌더링해 화면에 표시할 수 있다.</h3>
+                <label><input type="radio" name="q1" value="a"> O</label><br>
+                <label><input type="radio" name="q1" value="b"> X</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>2. HTML5의 특징으로 알맞지 않은 것을 고르시오.</h3>
+                <label><input type="radio" name="q2" value="a"> 시맨틱 웹</label><br>
+                <label><input type="radio" name="q2" value="b"> 플러그인 중시</label><br>
+                <label><input type="radio" name="q2" value="c"> 웹 표준 규격 중시</label><br>
+                <label><input type="radio" name="q2" value="d"> 웹 어플리케이션 작성 가능</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>3. 빈칸에 들어갈 어휘가 순서에 맞게 나열된 것을 고르시오.</h3>
+                <p>CSS 구문은 디자인을 적용하고자 하는 HTML 요소를 뜻하는 [   ]와 속성의 이름, 값이 포함되는 [   ]로 구성된다.</p>
+                <label><input type="radio" name="q3" value="a"> 선택자 - 선택부</label><br>
+                <label><input type="radio" name="q3" value="b"> 선언부 - 선택자</label><br>
+                <label><input type="radio" name="q3" value="c"> 선택자 - 선언부</label><br>
+                <label><input type="radio" name="q3" value="d"> 선언자 - 선언부</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>4. CSS를 문서에 적용하는 방법으로 옳은 것을 모두 골라라.</h3>
+                <p>ㄱ. HTML파일의 &lt;head&gt; 태그 사이에 &lt;style&gt; 태그를 작성한다.<br>
+                   ㄴ. 개별 태그에 필요한 디자인 속성을 일일이 작성한다.<br>
+                   ㄷ. 별도의 파일에 CSS 문서를 작성한 뒤 src를 통해 불러온다.</p>
+                <label><input type="radio" name="q4" value="a"> ㄱ, ㄴ</label><br>
+                <label><input type="radio" name="q4" value="b"> ㄴ, ㄷ</label><br>
+                <label><input type="radio" name="q4" value="c"> ㄱ, ㄷ</label><br>
+                <label><input type="radio" name="q4" value="d"> ㄱ, ㄴ, ㄷ</label>
+            </div>
+
+            <button type="submit">제출하기</button>
+        </form>
+        <p id="result"></p>
+        <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
+    </div>
+
+    <script>
+        document.getElementById("quiz-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let score = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === "a") {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === "b") {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === "c") {
+                score++;
+            }
+            if (document.querySelector('input[name="q4"]:checked')?.value === "c") {
+                score++;
+            }
+            document.getElementById("result").innerText = `당신의 점수: ${score} / 4`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1 - HTML5 & CSS3</title>
+    <link rel="stylesheet" href="Quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz 1 - HTML5 & CSS3</h1>
+        <form id="quiz-form">
+            <div class="quiz-question">
+                <h3>1. HTML5에서 웹 페이지의 구조를 나타내는 새로운 태그가 아닌 것은?</h3>
+                <label><input type="radio" name="q1" value="a"> &lt;article&gt;</label><br>
+                <label><input type="radio" name="q1" value="b"> &lt;header&gt;</label><br>
+                <label><input type="radio" name="q1" value="c"> &lt;div&gt;</label><br>
+                <label><input type="radio" name="q1" value="d"> &lt;section&gt;</label>
+            </div>
+            
+            <div class="quiz-question">
+                <h3>2. CSS3에서 반응형 웹 디자인을 구현할 때 사용하는 기술은?</h3>
+                <label><input type="radio" name="q2" value="a"> @media</label><br>
+                <label><input type="radio" name="q2" value="b"> @keyframes</label><br>
+                <label><input type="radio" name="q2" value="c"> @font-face</label><br>
+                <label><input type="radio" name="q2" value="d"> @transition</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>3. 다음 중 CSS3 애니메이션을 정의하는 속성은 무엇인가?</h3>
+                <label><input type="radio" name="q3" value="a"> transition</label><br>
+                <label><input type="radio" name="q3" value="b"> animation</label><br>
+                <label><input type="radio" name="q3" value="c"> transform</label><br>
+                <label><input type="radio" name="q3" value="d"> opacity</label>
+            </div>
+            
+            <button type="submit">제출하기</button>
+        </form>
+        <p id="result"></p>
+        <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
+    </div>
+    
+    <script>
+        document.getElementById("quiz-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let score = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === "c") {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === "a") {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === "b") {
+                score++;
+            }
+            document.getElementById("result").innerText = `당신의 점수: ${score} / 3`;
+        });
+    </script>
+</body>
+</html>
