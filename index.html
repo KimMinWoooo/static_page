@@ -9,7 +9,7 @@
 <body>
     <button class="calendar-button" onclick="openModal()">공부 기록</button>
     <button class="JS-button" onclick="location.href='js.html'">추가 JS Study</button>
-    
+
     <div id="calendarModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -20,7 +20,7 @@
             <input type="number" id="study-time" min="0"><br><br>
             <label for="study-content">공부한 내용:</label><br>
             <textarea id="study-content" rows="4" cols="30"></textarea><br><br>
-            <button onclick="saveStudyLog()">기록하기</button>
+            <button class="calendar-btn" onclick="saveStudyLog()">기록하기</button>
             <div id="study-log"></div>
         </div>
     </div>
