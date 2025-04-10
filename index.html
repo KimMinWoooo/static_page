@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="calendar-button" onclick="openModal()">공부 기록</button>
+    <button class="JS-button" onclick="location.href='js.html'">추가 JS Study</button>
+    
+    <div id="calendarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>공부 기록</h3>
+            <label for="study-date">날짜 선택:</label>
+            <input type="date" id="study-date"><br><br>
+            <label for="study-time">공부 시간:</label>
+            <input type="number" id="study-time" min="0"><br><br>
+            <label for="study-content">공부한 내용:</label><br>
+            <textarea id="study-content" rows="4" cols="30"></textarea><br><br>
+            <button onclick="saveStudyLog()">기록하기</button>
+            <div id="study-log"></div>
+        </div>
+    </div>
+
     <h1>웹 프로그래밍 및 실습 (나) 5조</h1>
     <h2>HTML5/CSS3 Study Page</h2>
     <div class="preview-section">
@@ -24,18 +42,54 @@
         </div>
     </div>
     <div class="preview-section">
-        <div class="preview-box" onclick="location.href='Quiz1.html'">
-            <h3>Quiz</h3>
+        <div class="preview-box" onclick="location.href='RandomQuiz.html'">
+            <h3>RandomQuiz</h3>
             <p>Quiz를 풀어볼까요?</p>
         </div>
     </div>
     <div class="study-links">
         <h2>더 자세하게 공부하러 가기</h2>
-        <p>아래 사이트에서 HTML과 CSS를 더 깊이 공부해보세요.</p>
+        <p>아래 사이트에서 HTML, CSS, JS를 더 깊이 공부해보세요.</p>
         <ul>
             <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3Schools HTML 학습하기</a></li>
             <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">W3Schools CSS 학습하기</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3Schools JS 학습하기</a></li>
         </ul>
     </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("calendarModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("calendarModal").style.display = "none";
+        }
+
+        function saveStudyLog() {
+            const date = document.getElementById("study-date").value;
+            const time = document.getElementById("study-time").value;
+            const content = document.getElementById("study-content").value;
+            const log = document.getElementById("study-log");
+
+            if (date && time && content) {
+                const entry = document.createElement("div");
+                entry.innerHTML = `<strong>${date}</strong> - ${time}시간<br>${content}<hr>`;
+                log.prepend(entry);
+
+                document.getElementById("study-date").value = "";
+                document.getElementById("study-time").value = "";
+                document.getElementById("study-content").value = "";
+            } else {
+                alert("모든 항목을 입력해주세요.");
+            }
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("calendarModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
-</html>

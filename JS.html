@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Study Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript 학습</h1>
+        <section class="study-section">
+            <h2>자바스크립트 소개</h2>
+            <p>자바스크립트(JavaScript)는 현재 인터넷에서 가장 널리 사용되는 프로그래밍 언어 중 하나로, PC, 태블릿, 스마트폰 등 다양한 장치에서 사용할 수 있는 웹 중심의 스크립트 언어입니다.</p>
+
+            <h3>왜 자바스크립트를 공부해야 할까요?</h3>
+            <ul>
+                <li>HTML은 웹 페이지의 구조(내용)를 정의합니다.</li>
+                <li>CSS는 웹 페이지의 스타일(디자인)을 정의합니다.</li>
+                <li>JavaScript는 웹 페이지의 동작과 기능을 정의합니다.</li>
+            </ul>
+            <p>즉, 자바스크립트는 동적인 웹 페이지를 만들기 위해 꼭 필요한 기술입니다.</p>
+
+            <h3>자바스크립트로 할 수 있는 것들</h3>
+            <ul>
+                <li>버튼 클릭 시 이벤트 처리</li>
+                <li>폼 입력값 유효성 검사</li>
+                <li>슬라이드쇼, 모달창, 알림창 만들기</li>
+                <li>AJAX를 이용한 서버와의 데이터 통신</li>
+                <li>Canvas를 이용한 그래픽 그리기 및 애니메이션</li>
+            </ul>
+
+            <h3>자바스크립트의 기본 문법 예시</h3>
+            <pre><code>// 변수 선언
+let name = "홍길동";
+
+// 함수 정의
+function sayHello() {
+    alert("안녕하세요, " + name + "님!");
+}
+
+// 함수 호출
+sayHello();</code></pre>
+
+            <h3>자바스크립트의 자료형</h3>
+            <p>자바스크립트는 다양한 자료형을 제공합니다. 주요 자료형은 다음과 같습니다:</p>
+            <ul>
+                <li>문자열 (String)</li>
+                <li>숫자 (Number)</li>
+                <li>불리언 (Boolean)</li>
+                <li>배열 (Array)</li>
+                <li>객체 (Object)</li>
+                <li>null 및 undefined</li>
+            </ul>
+
+            <h3>조건문과 반복문</h3>
+            <pre><code>// 조건문 예시
+let score = 85;
+if (score >= 90) {
+    console.log("A학점");
+} else if (score >= 80) {
+    console.log("B학점");
+} else {
+    console.log("C학점 이하");
+}
+
+// 반복문 예시
+for (let i = 1; i <= 5; i++) {
+    console.log(i + "번째 반복입니다");
+}</code></pre>
+
+            <h3>DOM(Document Object Model) 조작</h3>
+            <p>자바스크립트를 사용하면 HTML 문서의 요소들을 직접 조작할 수 있습니다.</p>
+            <pre><code>// HTML 요소의 텍스트 변경
+const title = document.getElementById("title");
+title.innerText = "변경된 제목입니다!";
+
+// 버튼 클릭 이벤트 등록
+const button = document.getElementById("btn");
+button.addEventListener("click", function() {
+    alert("버튼이 클릭되었습니다!");
+});</code></pre>
+        </section>
+        <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
+    </div>
+</body>
+</html>
